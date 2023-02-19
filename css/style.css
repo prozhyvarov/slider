@@ -17,6 +17,7 @@ html,body{
 	height: 100%;
 	padding: 50px;
 	display: flex;
+	position: relative;
 	justify-content:center;
 	align-items: center;
 }
@@ -56,13 +57,6 @@ html,body{
 .slick-arrow.slick-prev{}
 /* Стрелка вправо */
 .slick-arrow.slick-next{}
-/* Стрелка не активная */
-.slick-arrow.slick-disabled{}
-
-/* Точки */
-.slick-dots{}
-.slick-dots li{}
-.slick-dots button{}
 
 /* Конкретный слайдер */
 .slider {
@@ -76,56 +70,33 @@ html,body{
 	}
 }
 
-.slider .slick-arrow{
+.slick-prev, .slick-next {
 	position: absolute;
-	top: 50%;
+	bottom: 0;
+	right: 0;
 	margin: -30px 0px 0px 0px;
 	z-index: 10;
 	font-size: 0;
-	width: 30px;
-	height: 60px;
+	width: 32px;
+	height: 32px;
 }
-.slider .slick-arrow.slick-prev{
+
+.slick-prev{
 	left: 0;
-	background: url('../img/sl-arrow_l.svg') 0 0 / 100% no-repeat;
+	background: url('../img/arrow-down.svg') 0 0 / 100% no-repeat;
+
 }
-.slider .slick-arrow.slick-next{
+.slick-next{
 	right: 0;
-	background: url('../img/sl-arrow_r.svg') 0 0 / 100% no-repeat;
-}
-.slider .slick-arrow.slick-disabled{
-	opacity: 0.2;
-}
+	background: url('../img/arrow-right.svg') 0 0 / 100% no-repeat;
 
-.slider .slick-dots{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.slider .slick-dots li{
-	list-style: none;
-	margin: 0px 10px;
-}
-.slider .slick-dots button{
-	font-size: 0;
-	width: 10px;
-	height: 10px;
-	background-color: #fff;
-	border-radius: 50%;
-}
-
-.slider .slick-dots li.slick-active button{
-	background-color: transparent;
-	border: 1px solid #fff;
 }
 
 .slider__item {
 	padding: 0px 15px;
+	text-align: center;
 }
 .slider__item img{
 	max-width: 100%;
-}
-.slider__item.slick-center{
-	
 }
 

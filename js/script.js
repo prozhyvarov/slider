@@ -1,11 +1,11 @@
 $(document).ready(function(){
 	$('.slider').slick({
 		arrows:true,
-		dots:true,
 		slidesToShow:3,
-		autoplay:true,
-		speed:1000,
-		autoplaySpeed:800,
+		speed: 1000,
+		easing: 'ease-in-out',
+		centerMode: true,
+		variableWidth: true,
 		responsive:[
 			{
 				breakpoint: 768,
@@ -19,7 +19,8 @@ $(document).ready(function(){
 					slidesToShow:1
 				}
 			}
-		]
+		],
+		appendArrows: $('.arrows')
 	});
 });
 
